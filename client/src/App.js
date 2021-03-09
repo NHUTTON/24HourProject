@@ -1,6 +1,9 @@
 import './App.css';
+
+import Nasa from './Components/Nasa'
 import Weather from './Components/Weather';
 import React, {useState, useEffect} from 'react';
+
 
 
 function App() {
@@ -21,7 +24,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>NASA API</h1>
+      <Nasa /> 
       <Weather latitude={latitude} longitude={longitude}/>
     </div>
   );
