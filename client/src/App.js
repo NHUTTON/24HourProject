@@ -1,10 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
+import Nasa from './Components/Nasa'
+
 
 function App() {
   return (
     <div className="App">
-      <h1>NASA API</h1>
+      <h1> <Nasa /> </h1>
       <h1>Weather API</h1>
     </div>
   );
