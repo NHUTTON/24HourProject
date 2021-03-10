@@ -2,9 +2,10 @@ import './App.css';
 
 import Nasa from './Components/Nasa'
 import Weather from './Components/Weather';
+import Footer from './Components/Footer'
 
 import React, {useState, useEffect} from 'react';
-import {Card, CardBody} from 'reactstrap';
+import {Card, CardBody, Container, Row, Col} from 'reactstrap';
 
 
 function App() {
@@ -34,12 +35,15 @@ function App() {
       <h1>24-Hour React App</h1>
       <br/>
       <br/>
-      <Card className='mainBody'>
-        <CardBody >
-          <Nasa latitude={latitude} longitude={longitude} />
-          <Weather latitude={latitude} longitude={longitude}/>
-        </CardBody>
-      </Card>
+      <Container className='mainBody'>
+        <Row>
+          <Col><Nasa latitude={latitude} longitude={longitude} /></Col>
+          <Col><Weather latitude={latitude} longitude={longitude}/></Col>
+        </Row>
+      </Container>
+      <br/>
+      <br/>
+      <Footer className='footer'/>
     </div>
   );
 }
