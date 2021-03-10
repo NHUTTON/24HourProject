@@ -1,5 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import {Card, CardBody, CardTitle, CardSubtitle, CardImg} from  'reactstrap';
+<<<<<<< HEAD
+=======
+import './Nasa.css'
+>>>>>>> 24f653d98fc9b4bbe4fa5302788441d62d4dfd1a
 
 const Nasa = (props) => {
     const [image, setImage] = useState('');
@@ -28,6 +32,7 @@ const Nasa = (props) => {
     <div>
       <Card>
       <CardImg src={image} alt="Card image cap" />
+        <CardImg width="25%" src={image} alt="Image is loading..." />
         <CardBody>
         <CardTitle tag="h5">This is a satelite image of your current location</CardTitle>
           <CardSubtitle tag="h6" className="mb-2 text-muted">-Image quality is dependent on your location</CardSubtitle>
