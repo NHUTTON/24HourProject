@@ -14,6 +14,7 @@ const Nasa = (props) => {
     return (
         <div>
             <p>Test</p>
+            {/* {image !== '' ? <insert card image element> : <div></div>} */}
         </div>
     )
 }
