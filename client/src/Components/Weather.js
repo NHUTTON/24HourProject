@@ -66,7 +66,7 @@ const Weather = (props) => {
                     <CardTitle tag="h3">Your Local Weather</CardTitle>
                     <CardSubtitle tag="h6" className="mb-2 text-muted">This app uses Location Services, so please allow for the browser to track your location to view your local weather.</CardSubtitle>
                     <br/>
-                    {(weather !== '') ? <CardText>Description: {weather}</CardText> : <CardText>Please wait for weather description to load.</CardText>}
+                    {(weather !== '') ? <CardText>Weather Description: {weather}</CardText> : <CardText>Please wait for weather description to load.</CardText>}
                     {(tempDisplay === tempFah) ? <CardText>Temperature: {tempDisplay} F°</CardText> : (tempDisplay === tempCel) ? <CardText>Temperature: {tempDisplay} C°</CardText> : <CardText>Please wait for temperature information to load.</CardText>}
                     <Button onClick={(e) => toggleTemp(e)}>Toggle Fahrenheit/Celsius</Button>
                 </CardBody>
