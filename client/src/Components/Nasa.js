@@ -8,24 +8,24 @@ const Nasa = (props) => {
 
 
     const fetchResults = () => {
-    const long = props.longitude;
-    const lat = props.latitude;
+      const long = props.longitude;
+      const lat = props.latitude;
 
-    if (props.latitude !== '' && props.longitude !== '') {
-        fetch(`${baseUrl}?lon=${long.toFixed(2)}&lat=${lat.toFixed(2)}&&dim=0.280&api_key=${key}`)
-        .then(res => res.json())
-        .then(data => {
-          setImage(data.url)
-        })
+      if (props.latitude !== '' && props.longitude !== '') {
+          fetch(`${baseUrl}?lon=${long.toFixed(2)}&lat=${lat.toFixed(2)}&&dim=0.280&api_key=${key}`)
+          .then(res => res.json())
+          .then(data => {
+            setImage(data.url)
+          })
       }
-  }
+    }
 
     useEffect(() => {
         fetchResults();
     }, [props.latitude, props.longitude])
     
     return (
-<div>
+    <div>
       <Card>
       <img width="50%" src={image} alt="Card image cap" />
         <CardBody>
