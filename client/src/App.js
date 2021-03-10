@@ -1,6 +1,6 @@
 import './App.css';
 import Nasa from './Components/Nasa'
-// import Weather from './Components/Weather';
+import Weather from './Components/Weather';
 import React, {useState, useEffect} from 'react';
 
 
@@ -25,7 +25,7 @@ function App() {
   return (
   <div>
        <Nasa latitude={latitude} longitude={longitude} /> 
-    {/* <Weather latitude={latitude} longitude={longitude}/> */}
+      <Weather latitude={latitude} longitude={longitude}/>
  </div>
   )
 }
